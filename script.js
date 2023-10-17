@@ -157,3 +157,52 @@ function changeUnit() {
         }
     }
 }
+
+/*********************preloader**************************/
+
+// Array to store image paths
+const imagePaths = [
+    'images/Cloudy.jpg',
+    'images/LightRainShower.jpg',
+    'images/FreezingRain.jpg',
+    'images/HeavyRain.jpg',
+    'images/Rain.jpg',
+    'images/Dizzle.jpg',
+    'images/Fog.jpg',
+    'images/MostlySunny.jpg',
+    'images/Sunny.jpg',
+    'images/Night.jpg',
+    'images/Thunderstorm.jpg',
+    'images/Snow.jpg',
+    'images/LightSnowShower.jpg',
+    'images/Heavysnowshower.jpg',
+    'images/Clear.jpg'
+];
+
+// Function to preload images
+function preloadImages(imagePaths, callback) {
+    let loadedImages = 0;
+
+    for (const imagePath of imagePaths) {
+        const img = new Image();
+        img.src = imagePath;
+
+        img.onload = function() {
+            loadedImages++;
+            if (loadedImages === imagePaths.length) {
+                // All images have loaded
+                callback();
+            }
+        };
+    }
+}
+
+function handleAllImagesLoaded() {
+    document.body.classList.add("loaded");
+}
+
+// Preload the images when the website loads
+window.onload = function() {
+    // Preload the images
+    preloadImages(imagePaths, handleAllImagesLoaded);
+};
