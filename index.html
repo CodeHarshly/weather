@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href ="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Weather</title>
+</head>
+<body>
+    
+    <div class="banner">
+
+        <!-------------weather Search Bar--------------->
+        
+        <div class="search-banner">
+          <div class="add-search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" name="search" placeholder="What's your city" id="search-city" onchange="performSearch()">
+          </div>  
+          <div class="search-btn">
+              <input type="submit" value="Search" id="search">
+          </div>
+        </div>
+        <div class="weather-box" id="weather-box">
+
+            <!--------------------weather content------------------->
+            
+            <div class="weather-content" id="weather-content">
+                <h2 id="cityoutput"></h2>
+                <p id="description"></p>
+                <p id="temp"></p>
+                <p id="wind"></p>
+            </div>
+
+            <!----------------Temperature Converter content----------------->
+            <div class="temp-converter" id="temp-converter">
+                <h2>Temperature <br> Converter</h2>
+                <div class="box">
+                    <div class="input-temp">
+                        <input type="number" placeholder="Enter Temperature" id="input-temp" onchange="changeUnit()" >
+                    </div>
+                    <div class="input-unit">
+                        <select id="unit" onchange="changeUnit()">
+                            <option value="celsius">°C</option>
+                            <option value="fahrenheit">°F</option>
+                            <option value="kelvin">K</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="output1-1">
+                        
+                    </div>
+                    <div>
+                        <p id="output1-2">°F</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div id="output2-1">
+                        
+                    </div>
+                    <div>
+                        <p id="output2-2">K</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!---------------Botton------------>
+            <div class="weather-btn" id="weather-btn">
+                <div class="weather-btn-position">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <h6>Weather</h6>
+                </div>
+            </div>
+            <div class="temp-btn" id="temp-btn">
+                <div class="temp-btn-position">
+                    <h6>Temperature Converter</h6>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!--------------script---------------->
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
