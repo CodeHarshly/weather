@@ -8,19 +8,22 @@
     <title>Weather</title>
 </head>
 <body>
-    
+     <!-------------weather Search Bar--------------->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
     <div class="banner">
 
         <!-------------weather Search Bar--------------->
         
         <div class="search-banner">
-          <div class="add-search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" name="search" placeholder="What's your city" id="search-city" onchange="performSearch()">
-          </div>  
-          <div class="search-btn">
-              <input type="submit" value="Search" id="search">
-          </div>
+            <div class="add-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="search" placeholder="What's your city" id="search-city" onchange="performSearch()">
+            </div>  
+            <div class="search-btn">
+                <input type="submit" value="Search" id="search">
+            </div>
         </div>
         <div class="weather-box" id="weather-box">
 
@@ -49,17 +52,13 @@
                     </div>
                 </div>
                 <div class="box">
-                    <div id="output1-1">
-                        
-                    </div>
+                    <div id="output1-1"></div>
                     <div>
                         <p id="output1-2">°F</p>
                     </div>
                 </div>
                 <div class="box">
-                    <div id="output2-1">
-                        
-                    </div>
+                    <div id="output2-1"></div>
                     <div>
                         <p id="output2-2">K</p>
                     </div>

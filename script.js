@@ -73,8 +73,8 @@ function performSearch(){
                 weatherbox.style.backgroundImage = "url('images/Rain.jpg')";
             }
        }
-       if(descri.includes("dizzle")){
-            weatherbox.style.backgroundImage = "url('images/Dizzle.jpg')";
+       if(descri.includes("drizzle")){
+            weatherbox.style.backgroundImage = "url('images/Drizzle.jpg')";
        }
        if(descri.includes("fog") || descri.includes("haze")){
             weatherbox.style.backgroundImage = "url('images/Fog.jpg')";
@@ -97,9 +97,6 @@ function performSearch(){
             if(descri.includes("light")){
                 weatherbox.style.backgroundImage = "url('images/LightSnowShower.jpg')";
             }
-            if(descri.includes("heavy")){
-                weatherbox.style.backgroundImage = "url('images/Heavysnowshower.jpg')";
-            }
             else{
                 weatherbox.style.backgroundImage = "url('images/Snow.jpg')";
             }
@@ -116,7 +113,7 @@ function performSearch(){
    
 }
 
-searchButton.addEventListener("click", performSearch);
+search.addEventListener("click", performSearch);
 /***************Temperature Converter*********************/
 
 function changeUnit() {
@@ -160,14 +157,13 @@ function changeUnit() {
 
 /*********************preloader**************************/
 
-// Array to store image paths
 const imagePaths = [
     'images/Cloudy.jpg',
     'images/LightRainShower.jpg',
     'images/FreezingRain.jpg',
     'images/HeavyRain.jpg',
     'images/Rain.jpg',
-    'images/Dizzle.jpg',
+    'images/Drizzle.jpg',
     'images/Fog.jpg',
     'images/MostlySunny.jpg',
     'images/Sunny.jpg',
@@ -175,11 +171,10 @@ const imagePaths = [
     'images/Thunderstorm.jpg',
     'images/Snow.jpg',
     'images/LightSnowShower.jpg',
-    'images/Heavysnowshower.jpg',
     'images/Clear.jpg'
 ];
 
-// Function to preload images
+
 function preloadImages(imagePaths, callback) {
     let loadedImages = 0;
 
@@ -187,10 +182,10 @@ function preloadImages(imagePaths, callback) {
         const img = new Image();
         img.src = imagePath;
 
+        console.log("load3");
         img.onload = function() {
             loadedImages++;
             if (loadedImages === imagePaths.length) {
-                // All images have loaded
                 callback();
             }
         };
@@ -198,11 +193,12 @@ function preloadImages(imagePaths, callback) {
 }
 
 function handleAllImagesLoaded() {
+    console.log("load2");
     document.body.classList.add("loaded");
 }
 
-// Preload the images when the website loads
+
 window.onload = function() {
-    // Preload the images
+    console.log("load");
     preloadImages(imagePaths, handleAllImagesLoaded);
 };
