@@ -105,6 +105,8 @@ body{
 #description{
     width: 7rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: max-content;
     background-color: transparent;
     font-size: 1.1rem;
@@ -112,8 +114,7 @@ body{
     font-weight: 600;
     position: absolute;
     top: 8.4rem;
-    right: .7rem;
-    text-align: center;
+    right: .5rem;
 }
 #temp{
     position: absolute;
