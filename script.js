@@ -76,7 +76,7 @@ function performSearch(){
        if(descri.includes("drizzle")){
             weatherbox.style.backgroundImage = "url('images/Drizzle.jpg')";
        }
-       if(descri.includes("fog") || descri.includes("haze")){
+       if(descri.includes("fog") || descri.includes("haze" || descri.includes("mist"))){
             weatherbox.style.backgroundImage = "url('images/Fog.jpg')";
        }
        if(descri.includes("sunny")){
