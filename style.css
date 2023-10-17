@@ -103,9 +103,17 @@ body{
     font-weight: 600;
 }
 #description{
+    width: 7rem;
+    display: flex;
+    height: max-content;
+    background-color: transparent;
+    font-size: 1.1rem;
+    margin: 1rem;
+    font-weight: 600;
     position: absolute;
-    top: 8.6rem;
-    right: 0;
+    top: 8.4rem;
+    right: .7rem;
+    text-align: center;
 }
 #temp{
     position: absolute;
