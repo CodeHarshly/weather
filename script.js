@@ -157,7 +157,7 @@ function changeUnit() {
 
 /*********************preloader**************************/
 
-const imagePaths = [
+const ImgPaths = [
     'images/Cloudy.jpg',
     'images/LightRainShower.jpg',
     'images/FreezingRain.jpg',
@@ -175,24 +175,24 @@ const imagePaths = [
 ];
 
 
-function preloadImages(imagePaths, callback) {
-    let loadedImages = 0;
+function preloadImg(ImgPaths, callback) {
+    let loadImg = 0;
 
-    for (const imagePath of imagePaths) {
+    for (const ImgPath of ImgPaths) {
         const img = new Image();
-        img.src = imagePath;
+        img.src = ImgPath;
 
         console.log("load3");
         img.onload = function() {
-            loadedImages++;
-            if (loadedImages === imagePaths.length) {
+            loadImg++;
+            if (loadImg === ImgPaths.length) {
                 callback();
             }
         };
     }
 }
 
-function handleAllImagesLoaded() {
+function handleImgLoad() {
     console.log("load2");
     document.body.classList.add("loaded");
 }
@@ -200,5 +200,5 @@ function handleAllImagesLoaded() {
 
 window.onload = function() {
     console.log("load");
-    preloadImages(imagePaths, handleAllImagesLoaded);
+    preloadImg(ImgPaths, handleImgLoad);
 };
