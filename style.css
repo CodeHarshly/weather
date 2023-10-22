@@ -113,6 +113,7 @@ body{
     margin: 1rem;
     font-weight: 600;
     position: absolute;
+    text-align: center;
     top: 8.4rem;
     right: .5rem;
 }
@@ -169,6 +170,10 @@ select{
     text-align: left;
     width: 6.9rem;
     overflow-y: auto;
+}
+.box #output1-1::-webkit-scrollbar,
+.box #output2-1::-webkit-scrollbar{
+    display: none;
 }
 
 
